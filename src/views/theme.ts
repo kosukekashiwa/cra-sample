@@ -1,13 +1,21 @@
 import { createTheme } from '@mui/material';
-import { blue, green } from '@mui/material/colors';
+import { blueGrey, green } from '@mui/material/colors';
 
 const theme = createTheme({
   palette: {
     primary: {
       main: green[500],
     },
-    secondary: {
-      main: blue[500],
+  },
+  components: {
+    MuiCssBaseline: {
+      styleOverrides: {
+        body: {
+          minWidth: '1366px',
+          minHeight: '768px',
+          backgroundColor: blueGrey[50],
+        },
+      },
     },
   },
 });

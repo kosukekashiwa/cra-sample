@@ -33,7 +33,7 @@ const RoutingSample1: React.VFC = () => {
 
   return (
     <Button onClick={handleButtonClick} variant="contained">
-      2に移動
+      Test!
     </Button>
   );
 };

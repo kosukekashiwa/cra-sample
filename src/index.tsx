@@ -6,8 +6,8 @@ import theme from './views/theme';
 
 ReactDOM.render(
   <React.StrictMode>
-    <CssBaseline />
     <ThemeProvider theme={theme}>
+      <CssBaseline />
       <App />
     </ThemeProvider>
   </React.StrictMode>,

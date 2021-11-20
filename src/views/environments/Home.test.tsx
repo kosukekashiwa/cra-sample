@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import Home from './Home';
 
-describe('App tests', () => {
+describe('Home tests', () => {
   describe('Initial display tests', () => {
     test('renders title', () => {
-      render(<App />);
+      render(<Home />);
 
       screen.getByText('Create React App Sample');
     });
