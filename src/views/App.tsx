@@ -1,12 +1,17 @@
-import { Box, Button } from '@mui/material';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 import React from 'react';
+import Home from './environments/Home';
 
 const App: React.VFC = () => {
   return (
-    <Box>
-      <Box>Create React App Sample</Box>
-      <Button variant="contained">Test!</Button>
-    </Box>
+    <BrowserRouter>
+      <Switch>
+        <Redirect exact strict from="/" to="/cra-app" />
+        <Route path="/cra-app">
+          <Home />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 };
 
