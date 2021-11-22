@@ -11,7 +11,6 @@ const theme = createTheme({
       styleOverrides: {
         body: {
           minWidth: '1366px',
-          minHeight: '768px',
           color: '#333333',
           backgroundColor: blueGrey[50],
         },
