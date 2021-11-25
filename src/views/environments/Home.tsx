@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import { Route, Switch, Redirect, useRouteMatch, useHistory } from 'react-router-dom';
 import DashboardView from './dashboard/DashboardView';
-import HogemonListView from './hogemon/HogemonListView';
+import DataListView from './hogeData/DataListView';
 import CRAHeader from '../ecosystems/CRAHeader';
 import AppContainer from '../atoms/containers/AppContainer';
 import MainContainer from '../atoms/containers/MainContainer';
@@ -13,15 +13,15 @@ const Home: React.VFC = () => {
   const handleDashboardButtonClick = useCallback((): void => {
     history.push(`${path}/dashboard`);
   }, [history, path]);
-  const handleHogemonListButtonClick = useCallback((): void => {
-    history.push(`${path}/hogemon-list`);
+  const handleDataListButtonClick = useCallback((): void => {
+    history.push(`${path}/data-list`);
   }, [history, path]);
 
   return (
     <AppContainer>
       <CRAHeader
         onDashboardButtonClick={handleDashboardButtonClick}
-        onHogemonListButtonClick={handleHogemonListButtonClick}
+        onDataListButtonClick={handleDataListButtonClick}
       />
 
       <MainContainer>
@@ -34,8 +34,8 @@ const Home: React.VFC = () => {
             <DashboardView />
           </Route>
 
-          <Route exact sensitive path={`${path}/hogemon-list`}>
-            <HogemonListView />
+          <Route exact sensitive path={`${path}/data-list`}>
+            <DataListView />
           </Route>
         </Switch>
       </MainContainer>

@@ -1,13 +1,13 @@
 import React from 'react';
 import AppHeader from '../organisms/AppHeader';
 import DashboardButton, { DashboardButtonProps } from '../atoms/buttons/DashboardButton';
-import HogemonListButton, { HogemonListButtonProps } from '../atoms/buttons/HogemonListButton';
+import DataListButton, { DataListButtonProps } from '../atoms/buttons/DataListButton';
 
 export type CRAHeaderProps = Pick<DashboardButtonProps, 'onDashboardButtonClick'> &
-  Pick<HogemonListButtonProps, 'onHogemonListButtonClick'>;
+  Pick<DataListButtonProps, 'onDataListButtonClick'>;
 
 const CRAHeader: React.VFC<CRAHeaderProps> = (props) => {
-  const userName = 'Satoshi';
+  const userName = 'User Name';
 
   return (
     <AppHeader
@@ -17,7 +17,7 @@ const CRAHeader: React.VFC<CRAHeaderProps> = (props) => {
         { id: 0, node: <DashboardButton onDashboardButtonClick={props.onDashboardButtonClick} /> },
         {
           id: 1,
-          node: <HogemonListButton onHogemonListButtonClick={props.onHogemonListButtonClick} />,
+          node: <DataListButton onDataListButtonClick={props.onDataListButtonClick} />,
         },
       ]}
     />

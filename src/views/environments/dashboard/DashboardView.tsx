@@ -1,10 +1,11 @@
 import React from 'react';
 import Box from '@mui/material/Box';
+import ViewTitleLabel from '../../atoms/labels/ViewTitleLabel';
 
 const DashboardView: React.VFC = () => {
   return (
-    <Box height="2000px">
-      <span>DashboardView</span>
+    <Box>
+      <ViewTitleLabel label="Dashboard" />
     </Box>
   );
 };

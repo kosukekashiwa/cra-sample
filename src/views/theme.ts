@@ -16,6 +16,14 @@ const theme = createTheme({
         },
       },
     },
+    MuiToolbar: {
+      styleOverrides: {
+        root: {
+          width: '1200px',
+          margin: 'auto',
+        },
+      },
+    },
     MuiButton: {
       styleOverrides: {
         root: {
