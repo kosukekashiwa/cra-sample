@@ -1,17 +1,28 @@
-import React from 'react';
-import { Route, Switch, Redirect, useRouteMatch } from 'react-router-dom';
+import React, { useCallback } from 'react';
+import { Route, Switch, Redirect, useRouteMatch, useHistory } from 'react-router-dom';
 import DashboardView from './dashboard/DashboardView';
 import HogemonListView from './hogemon/HogemonListView';
+import CRAHeader from '../ecosystems/CRAHeader';
 import AppContainer from '../atoms/containers/AppContainer';
 import MainContainer from '../atoms/containers/MainContainer';
-import AppHeader from '../organisms/AppHeader';
 
 const Home: React.VFC = () => {
   const { path } = useRouteMatch();
+  const history = useHistory();
+
+  const handleDashboardButtonClick = useCallback((): void => {
+    history.push(`${path}/dashboard`);
+  }, [history, path]);
+  const handleHogemonListButtonClick = useCallback((): void => {
+    history.push(`${path}/hogemon-list`);
+  }, [history, path]);
 
   return (
     <AppContainer>
-      <AppHeader appTitle="Create React App Sample" />
+      <CRAHeader
+        onDashboardButtonClick={handleDashboardButtonClick}
+        onHogemonListButtonClick={handleHogemonListButtonClick}
+      />
 
       <MainContainer>
         <Switch>
