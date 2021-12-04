@@ -1,6 +1,8 @@
 import { createTheme } from '@mui/material/styles';
 import { blueGrey, blue, deepOrange } from '@mui/material/colors';
 
+export const SCREEN_WIDTH = 1200;
+
 const theme = createTheme({
   palette: {
     primary: blue,
@@ -10,7 +12,7 @@ const theme = createTheme({
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          minWidth: '1366px',
+          minWidth: `${SCREEN_WIDTH}px`,
           color: '#333333',
           backgroundColor: blueGrey[50],
         },
@@ -19,7 +21,7 @@ const theme = createTheme({
     MuiToolbar: {
       styleOverrides: {
         root: {
-          width: '1200px',
+          width: `${SCREEN_WIDTH}px`,
           margin: 'auto',
         },
       },
