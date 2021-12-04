@@ -1,34 +1,18 @@
 import React from 'react';
-import { Box } from '@mui/material';
+import Box from '@mui/material/Box';
+import Skeleton from '@mui/material/Skeleton';
+import Stack from '@mui/material/Stack';
 import ViewTitleLabel from '../../atoms/labels/ViewTitleLabel';
 
 const HogemonListView: React.VFC = () => {
-  const hogemonList: string[] = [
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-    'scroll check',
-  ];
-
   return (
     <Box>
       <ViewTitleLabel label="Hoge Data List" />
-      {hogemonList.map((item, idx) => (
-        <Box key={idx} height="100px" mb="8px" sx={{ backgroundColor: 'green' }}>
-          {item}
-        </Box>
-      ))}
+      <Stack spacing={1}>
+        <Skeleton variant="text" />
+        <Skeleton variant="circular" width={40} height={40} />
+        <Skeleton variant="rectangular" width={210} height={118} />
+      </Stack>
     </Box>
   );
 };
