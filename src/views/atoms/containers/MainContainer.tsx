@@ -10,7 +10,7 @@ const MainContainer: React.VFC<MainContainerProps> = (props) => {
   return (
     <Box flexGrow={1} sx={{ overflowY: 'auto' }}>
       <Box
-        width="100%"
+        width="100vw"
         minWidth={`${FLEXIBLE_MIN_WIDTH}px`}
         maxWidth={`${FLEXIBLE_MAX_WIDTH}px`}
         margin="auto"

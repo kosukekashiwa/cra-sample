@@ -6,9 +6,17 @@ import Box from '@mui/material/Box';
 import { blue } from '@mui/material/colors';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import AppTitleLabel from '../atoms/labels/AppTitleLabel';
+import { FLEXIBLE_MAX_WIDTH, FLEXIBLE_MIN_WIDTH } from '../theme';
 
 const StyledAppbar = styled(AppBar)({
   backgroundColor: blue[900],
+});
+
+const StyledToolbar = styled(Toolbar)({
+  width: '100vw',
+  minWidth: `${FLEXIBLE_MIN_WIDTH}px`,
+  maxWidth: `${FLEXIBLE_MAX_WIDTH}px`,
+  margin: 'auto',
 });
 
 export type AppHeaderProps = {
@@ -20,7 +28,7 @@ export type AppHeaderProps = {
 const AppHeader: React.VFC<AppHeaderProps> = (props) => {
   return (
     <StyledAppbar position="static">
-      <Toolbar>
+      <StyledToolbar>
         <AppTitleLabel label={props.appTitle} />
         <Box display="flex" gap="8px" ml="8px">
           {props.leftItems.map((item) => (
@@ -31,7 +39,7 @@ const AppHeader: React.VFC<AppHeaderProps> = (props) => {
           <AccountCircleIcon />
           <Box>{props.userName}</Box>
         </Box>
-      </Toolbar>
+      </StyledToolbar>
     </StyledAppbar>
   );
 };
