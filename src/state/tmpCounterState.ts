@@ -12,22 +12,20 @@ export const useTmpCounterState = (): number => {
 
 export const useCountUpTmpCounterState = () => {
   const setState = useSetRecoilState(tmpCounterState);
-  const temp = useTmpCounterState();
 
   const countUp = useCallback(() => {
-    setState(temp + 1);
-  }, [setState, temp]);
+    setState((currVal) => currVal + 1);
+  }, [setState]);
 
   return { countUp };
 };
 
 export const useCountDownTmpCounterState = () => {
   const setState = useSetRecoilState(tmpCounterState);
-  const temp = useTmpCounterState();
 
   const countDown = useCallback(() => {
-    setState(temp - 1);
-  }, [setState, temp]);
+    setState((currVal) => currVal - 1);
+  }, [setState]);
 
   return { countDown };
 };
