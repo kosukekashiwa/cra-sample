@@ -5,8 +5,8 @@ import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 import { blue } from '@mui/material/colors';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import AppTitleLabel from '../atoms/labels/AppTitleLabel';
 import { FLEXIBLE_MAX_WIDTH, FLEXIBLE_MIN_WIDTH } from '../theme';
+import BaseTextButton, { BaseTextButtonProps } from '../atoms/buttons/bases/BaseTextButton';
 
 const StyledAppbar = styled(AppBar)({
   backgroundColor: blue[900],
@@ -21,6 +21,7 @@ const StyledToolbar = styled(Toolbar)({
 
 export type AppHeaderProps = {
   appTitle: string;
+  onApptitleClick: BaseTextButtonProps['onClick'];
   userName: string;
   leftItems: { id: number; node: React.ReactNode }[];
 };
@@ -29,7 +30,12 @@ const AppHeader: React.VFC<AppHeaderProps> = (props) => {
   return (
     <StyledAppbar position="static">
       <StyledToolbar>
-        <AppTitleLabel label={props.appTitle} />
+        <BaseTextButton
+          label={props.appTitle}
+          onClick={props.onApptitleClick}
+          fontRemSize={1.5}
+          color={'white'}
+        />
         <Box display="flex" gap="8px" ml="8px">
           {props.leftItems.map((item) => (
             <React.Fragment key={item.id}>{item.node}</React.Fragment>

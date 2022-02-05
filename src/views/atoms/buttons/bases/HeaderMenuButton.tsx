@@ -1,21 +1,11 @@
 import React from 'react';
-import Button, { ButtonProps } from '@mui/material/Button';
 import { blueGrey } from '@mui/material/colors';
+import BaseTextButton, { BaseTextButtonProps } from './BaseTextButton';
 
-export type HeaderMenuButtonProps = Pick<ButtonProps, 'onClick'> & {
-  label: string;
-};
+export type HeaderMenuButtonProps = Pick<BaseTextButtonProps, 'label' | 'onClick'>;
 
 const HeaderMenuButton: React.VFC<HeaderMenuButtonProps> = (props) => {
-  return (
-    <Button
-      variant="text"
-      onClick={props.onClick}
-      sx={{ color: blueGrey[200], fontWeight: 'bold' }}
-    >
-      {props.label}
-    </Button>
-  );
+  return <BaseTextButton label={props.label} onClick={props.onClick} color={blueGrey[200]} />;
 };
 
 export default HeaderMenuButton;

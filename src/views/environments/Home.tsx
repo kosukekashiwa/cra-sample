@@ -10,6 +10,9 @@ const Home: React.VFC = () => {
   const { path } = useRouteMatch();
   const history = useHistory();
 
+  const handleApptitleClick = useCallback((): void => {
+    history.push(`${path}/dashboard`);
+  }, [history, path]);
   const handleDashboardButtonClick = useCallback((): void => {
     history.push(`${path}/dashboard`);
   }, [history, path]);
@@ -20,6 +23,7 @@ const Home: React.VFC = () => {
   return (
     <AppContainer>
       <CRAHeader
+        onApptitleClick={handleApptitleClick}
         onDashboardButtonClick={handleDashboardButtonClick}
         onDataListButtonClick={handleDataListButtonClick}
       />
