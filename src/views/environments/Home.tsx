@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { Suspense, useCallback } from 'react';
 import { Route, Switch, Redirect, useRouteMatch, useHistory } from 'react-router-dom';
 import DashboardView from './dashboard/DashboardView';
 import DataListView from './hogeData/DataListView';
@@ -22,11 +22,14 @@ const Home: React.VFC = () => {
 
   return (
     <AppContainer>
-      <CRAHeader
-        onApptitleClick={handleApptitleClick}
-        onDashboardButtonClick={handleDashboardButtonClick}
-        onDataListButtonClick={handleDataListButtonClick}
-      />
+      {/* memo: Suspense仮置き */}
+      <Suspense fallback={<div>Loading...</div>}>
+        <CRAHeader
+          onApptitleClick={handleApptitleClick}
+          onDashboardButtonClick={handleDashboardButtonClick}
+          onDataListButtonClick={handleDataListButtonClick}
+        />
+      </Suspense>
 
       <MainContainer>
         <Switch>

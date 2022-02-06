@@ -1,4 +1,8 @@
 const db = {
+  loginUser: {
+    id: 1,
+    name: 'Login User',
+  },
   sample: [],
 };
 
