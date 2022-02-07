@@ -10,8 +10,8 @@ import { Button } from '@mui/material';
 
 const DashboardView: React.VFC = () => {
   const tempCount = useTmpCounterState();
-  const { countUp } = useCountUpTmpCounterState();
-  const { countDown } = useCountDownTmpCounterState();
+  const countUp = useCountUpTmpCounterState();
+  const countDown = useCountDownTmpCounterState();
 
   return (
     <Box>

@@ -10,22 +10,18 @@ export const useTmpCounterState = (): number => {
   return useRecoilValue(tmpCounterState);
 };
 
-export const useCountUpTmpCounterState = () => {
+export const useCountUpTmpCounterState = (): (() => void) => {
   const setState = useSetRecoilState(tmpCounterState);
 
-  const countUp = useCallback(() => {
+  return useCallback(() => {
     setState((currVal) => currVal + 1);
   }, [setState]);
-
-  return { countUp };
 };
 
-export const useCountDownTmpCounterState = () => {
+export const useCountDownTmpCounterState = (): (() => void) => {
   const setState = useSetRecoilState(tmpCounterState);
 
-  const countDown = useCallback(() => {
+  return useCallback(() => {
     setState((currVal) => currVal - 1);
   }, [setState]);
-
-  return { countDown };
 };
