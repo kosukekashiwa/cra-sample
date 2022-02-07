@@ -13,15 +13,19 @@ export const useTmpCounterState = (): number => {
 export const useCountUpTmpCounterState = (): (() => void) => {
   const setState = useSetRecoilState(tmpCounterState);
 
-  return useCallback(() => {
+  const countUp = useCallback(() => {
     setState((currVal) => currVal + 1);
   }, [setState]);
+
+  return countUp;
 };
 
 export const useCountDownTmpCounterState = (): (() => void) => {
   const setState = useSetRecoilState(tmpCounterState);
 
-  return useCallback(() => {
+  const countDown = useCallback(() => {
     setState((currVal) => currVal - 1);
   }, [setState]);
+
+  return countDown;
 };
