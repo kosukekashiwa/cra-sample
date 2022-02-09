@@ -10,7 +10,7 @@ An app to check the technologies I'm interested in, such as Recoil.
 - axios 0.25.0
 - Recoil 0.6.1
 - MUI 5.1.1
-- Storybook 6.4
+- Storybook 6.4.18
 
 # Usage
 
