@@ -20,7 +20,7 @@ An app to check the technologies I'm interested in, such as Recoil.
 $ npm run mock
 ```
 
-2. Start the React app.
+2. Launch the React app.
 
 ```bash
 $ npm start
