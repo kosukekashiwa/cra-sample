@@ -7,6 +7,7 @@ import {
   useTmpCounterState,
 } from '../../../state/tmpCounterState';
 import { Button } from '@mui/material';
+import BaseButton from '../../atoms/buttons/bases/BaseButton';
 
 const DashboardView: React.VFC = () => {
   const tempCount = useTmpCounterState();
@@ -23,6 +24,8 @@ const DashboardView: React.VFC = () => {
       <Button variant={'outlined'} onClick={countDown}>
         count-1
       </Button>
+      <BaseButton label={'hoge'} />
+      <BaseButton label={'hoge'} color={'secondary'} />
     </Box>
   );
 };

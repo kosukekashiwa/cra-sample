@@ -33,7 +33,7 @@ const AppHeader: React.VFC<AppHeaderProps> = (props) => {
         <BaseTextButton
           label={props.appTitle}
           onClick={props.onApptitleClick}
-          fontRemSize={1.5}
+          fontSize={'large'}
           color={'white'}
         />
         <Box display="flex" gap="8px" ml="8px">
