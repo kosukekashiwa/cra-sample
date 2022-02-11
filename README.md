@@ -1,8 +1,6 @@
 # cra-sample
 
-An app created by "npx create-react-app".
-
-An app to check the technologies I'm interested in, such as Recoil.
+Recoil 等を触ってみる用のアプリケーション。
 
 - React 17.0.2
 - TypeScript 4.5.2
