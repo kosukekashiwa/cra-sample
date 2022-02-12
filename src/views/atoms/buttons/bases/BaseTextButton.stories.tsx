@@ -2,7 +2,6 @@ import { ComponentMeta, ComponentStoryObj } from '@storybook/react';
 import BaseTextButton from './BaseTextButton';
 
 export default {
-  // title: 'Button/BaseTextButton',
   component: BaseTextButton,
 } as ComponentMeta<typeof BaseTextButton>;
 
