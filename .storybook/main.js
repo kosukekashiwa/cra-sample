@@ -6,6 +6,9 @@ module.exports = {
     '@storybook/preset-create-react-app',
     '@storybook/addon-interactions',
   ],
+  features: {
+    interactionsDebugger: true,
+  },
   webpackFinal(config) {
     delete config.resolve.alias['emotion-theming'];
     delete config.resolve.alias['@emotion/styled'];
