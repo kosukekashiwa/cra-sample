@@ -3,7 +3,7 @@ import CRAHeader from './CRAHeader';
 
 describe('CRAHeader tests', () => {
   describe('Initial display tests', () => {
-    test('renders title', () => {
+    test.skip('renders title', () => {
       render(
         <CRAHeader
           onApptitleClick={() => {}}

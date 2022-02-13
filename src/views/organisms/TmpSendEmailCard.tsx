@@ -26,7 +26,11 @@ const TmpSendEmailCard: React.VFC = () => {
             Send
           </Button>
         </Box>
-        {isSend && <Box mt={1}>送信しました。</Box>}
+        {isSend && (
+          <Box data-testid={'sample'} mt={1}>
+            送信しました。
+          </Box>
+        )}
       </CardContent>
     </Card>
   );
