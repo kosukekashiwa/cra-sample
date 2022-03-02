@@ -15,6 +15,7 @@ const App: React.VFC = () => {
           <Route path={`dashboard`} element={<DashboardView />} />
           <Route path={`data-list`} element={<DataListView />} />
         </Route>
+        <Route path="*" element={<div>Not Found</div>} />
       </Routes>
     </BrowserRouter>
   );
