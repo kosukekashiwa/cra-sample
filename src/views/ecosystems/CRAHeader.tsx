@@ -10,7 +10,6 @@ export type CRAHeaderProps = Pick<AppHeaderProps, 'onApptitleClick'> &
 
 const CRAHeader: React.VFC<CRAHeaderProps> = (props) => {
   const loginUser = useLoginUserState();
-  console.log(loginUser);
 
   return (
     <AppHeader
