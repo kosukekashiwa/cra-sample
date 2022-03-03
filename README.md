@@ -4,7 +4,7 @@ Recoil 等を触ってみる用のアプリケーション。
 
 - React 17.0.2
 - TypeScript 4.5.2
-- react-router-dom 5.3.0
+- react-router-dom 6.2.2
 - axios 0.25.0
 - Recoil 0.6.1
 - MUI 5.1.1
