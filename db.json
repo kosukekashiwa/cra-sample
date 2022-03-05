@@ -1,1 +1,1 @@
-{"loginUser":{"id":1,"name":"Login User"},"sample":[{"id":0,"name":"hoge0"},{"id":1,"name":"hoge1"},{"id":2,"name":"hoge2"},{"id":3,"name":"hoge3"},{"id":4,"name":"hoge4"}]}
+{"loginUser":[{"id":0,"name":"user0"},{"id":1,"name":"user1"},{"id":2,"name":"user2"},{"id":3,"name":"user3"},{"id":4,"name":"user4"}],"sample":[{"id":0,"name":"hoge0"},{"id":1,"name":"hoge1"},{"id":2,"name":"hoge2"},{"id":3,"name":"hoge3"},{"id":4,"name":"hoge4"}]}

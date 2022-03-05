@@ -1,15 +1,19 @@
 const db = {
-  loginUser: {
-    id: 1,
-    name: 'Login User',
-  },
+  loginUser: [],
   sample: [],
 };
 
 for (let i = 0; i < 5; i++) {
+  db.loginUser.push({
+    id: i,
+    name: 'user' + i,
+  });
+}
+
+for (let i = 0; i < 5; i++) {
   db.sample.push({
     id: i,
-    name: 'hoge' + i,
+    name: 'sample' + i,
   });
 }
 

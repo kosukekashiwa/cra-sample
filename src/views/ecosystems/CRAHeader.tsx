@@ -2,20 +2,20 @@ import React from 'react';
 import AppHeader, { AppHeaderProps } from '../organisms/AppHeader';
 import DashboardButton, { DashboardButtonProps } from '../atoms/buttons/DashboardButton';
 import DataListButton, { DataListButtonProps } from '../atoms/buttons/DataListButton';
-import { useLoginUserState } from '../../state/tmpLoginUserState';
+import { useCurrentUserState } from '../../state/tmpLoginUserState';
 
 export type CRAHeaderProps = Pick<AppHeaderProps, 'onApptitleClick'> &
   Pick<DashboardButtonProps, 'onDashboardButtonClick'> &
   Pick<DataListButtonProps, 'onDataListButtonClick'>;
 
 const CRAHeader: React.VFC<CRAHeaderProps> = (props) => {
-  const loginUser = useLoginUserState();
+  const currentUser = useCurrentUserState();
 
   return (
     <AppHeader
       appTitle="CRA System"
       onApptitleClick={props.onApptitleClick}
-      userName={loginUser.name}
+      userName={currentUser.name}
       leftItems={[
         { id: 0, node: <DashboardButton onDashboardButtonClick={props.onDashboardButtonClick} /> },
         {
