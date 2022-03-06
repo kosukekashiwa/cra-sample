@@ -2,18 +2,18 @@ import React, { Suspense } from 'react';
 import Box from '@mui/material/Box';
 import ViewTitleLabel from '../../atoms/labels/ViewTitleLabel';
 import {
-  useCountDownTmpCounterState,
-  useCountUpTmpCounterState,
-  useTmpCounterState,
-} from '../../../state/tmpCounterState';
-import { Button, Card, CardContent, Stack } from '@mui/material';
+  useCountDownCounterState,
+  useCountUpCounterState,
+  useCounterState,
+} from '../../../state/counterState';
+import { Card, CardContent, Stack } from '@mui/material';
 import BaseButton from '../../atoms/buttons/bases/BaseButton';
-import { Sample, useSampleListState, useSampleState } from '../../../state/tmpSampleState';
+import { Sample, useSampleListState, useSampleState } from '../../../state/sampleState';
 
 const DashboardView: React.VFC = () => {
-  const tempCount = useTmpCounterState();
-  const countUp = useCountUpTmpCounterState();
-  const countDown = useCountDownTmpCounterState();
+  const tempCount = useCounterState();
+  const countUp = useCountUpCounterState();
+  const countDown = useCountDownCounterState();
 
   return (
     <Box>

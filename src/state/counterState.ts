@@ -1,17 +1,17 @@
 import { useCallback } from 'react';
 import { atom, useRecoilValue, useSetRecoilState } from 'recoil';
 
-const tmpCounterState = atom<number>({
+const counterState = atom<number>({
   key: 'tmpCounterState',
   default: 0,
 });
 
-export const useTmpCounterState = (): number => {
-  return useRecoilValue(tmpCounterState);
+export const useCounterState = (): number => {
+  return useRecoilValue(counterState);
 };
 
-export const useCountUpTmpCounterState = (): (() => void) => {
-  const setState = useSetRecoilState(tmpCounterState);
+export const useCountUpCounterState = (): (() => void) => {
+  const setState = useSetRecoilState(counterState);
 
   const countUp = useCallback(() => {
     setState((currVal) => currVal + 1);
@@ -20,8 +20,8 @@ export const useCountUpTmpCounterState = (): (() => void) => {
   return countUp;
 };
 
-export const useCountDownTmpCounterState = (): (() => void) => {
-  const setState = useSetRecoilState(tmpCounterState);
+export const useCountDownCounterState = (): (() => void) => {
+  const setState = useSetRecoilState(counterState);
 
   const countDown = useCallback(() => {
     setState((currVal) => currVal - 1);

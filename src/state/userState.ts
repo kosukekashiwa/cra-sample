@@ -6,16 +6,16 @@ type LoginUser = {
   name: string;
 };
 
-const tmpCurrentUserIDState = atom({
-  key: 'TmpCurrentUserIDState',
+const userIDState = atom({
+  key: 'UserIDState',
   default: 1,
 });
 
-const tmpCurrentUserState = selector<LoginUser>({
-  key: 'TmpCurrentUserState',
+const userState = selector<LoginUser>({
+  key: 'UserState',
   get: async ({ get }) => {
     try {
-      const userID = get(tmpCurrentUserIDState);
+      const userID = get(userIDState);
       const respons = await client.get(`/loginUser/${userID}`);
       return respons.data;
     } catch (e) {
@@ -25,6 +25,6 @@ const tmpCurrentUserState = selector<LoginUser>({
   },
 });
 
-export const useCurrentUserState = (): LoginUser => {
-  return useRecoilValue(tmpCurrentUserState);
+export const useUserState = (): LoginUser => {
+  return useRecoilValue(userState);
 };

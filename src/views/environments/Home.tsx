@@ -1,4 +1,4 @@
-import React, { Suspense, useCallback } from 'react';
+import React, { useCallback } from 'react';
 import { useNavigate, Outlet } from 'react-router-dom';
 import CRAHeader from '../ecosystems/CRAHeader';
 import AppContainer from '../atoms/containers/AppContainer';
@@ -22,13 +22,11 @@ const Home: React.VFC = () => {
   return (
     <AppContainer>
       {/* memo: Suspense仮置き */}
-      <Suspense fallback={<div>Loading...</div>}>
-        <CRAHeader
-          onApptitleClick={handleApptitleClick}
-          onDashboardButtonClick={handleDashboardButtonClick}
-          onDataListButtonClick={handleDataListButtonClick}
-        />
-      </Suspense>
+      <CRAHeader
+        onApptitleClick={handleApptitleClick}
+        onDashboardButtonClick={handleDashboardButtonClick}
+        onDataListButtonClick={handleDataListButtonClick}
+      />
 
       <MainContainer>
         <Outlet />
