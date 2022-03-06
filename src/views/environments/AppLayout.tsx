@@ -4,7 +4,7 @@ import CRAHeader from '../ecosystems/CRAHeader';
 import AppContainer from '../atoms/containers/AppContainer';
 import MainContainer from '../atoms/containers/MainContainer';
 
-const Home: React.VFC = () => {
+const AppLayout: React.VFC = () => {
   // memo: useNavigateはなんとなく<App/>のみで扱いたい
   // Component名も<Home/> -> <***Layout/>にしたい
   const navigate = useNavigate();
@@ -35,4 +35,4 @@ const Home: React.VFC = () => {
   );
 };
 
-export default Home;
+export default AppLayout;
