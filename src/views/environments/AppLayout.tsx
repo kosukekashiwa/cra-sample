@@ -6,7 +6,6 @@ import MainContainer from '../atoms/containers/MainContainer';
 
 const AppLayout: React.VFC = () => {
   // memo: useNavigateはなんとなく<App/>のみで扱いたい
-  // Component名も<Home/> -> <***Layout/>にしたい
   const navigate = useNavigate();
 
   const handleApptitleClick = useCallback((): void => {
@@ -21,7 +20,6 @@ const AppLayout: React.VFC = () => {
 
   return (
     <AppContainer>
-      {/* memo: Suspense仮置き */}
       <CRAHeader
         onApptitleClick={handleApptitleClick}
         onDashboardButtonClick={handleDashboardButtonClick}
